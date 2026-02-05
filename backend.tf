@@ -1,8 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "tf-state-vishwa-feb26"
+    bucket         = "tf-state-user5-feb26"
     key            = "lab1/terraform.tfstate"
     region         = "us-west-2"
-    dynamodb_table = "terraform-locks"
+    use_lockfile   = true
+    #dynamodb_table = "terraform-locks"
   }
 }
